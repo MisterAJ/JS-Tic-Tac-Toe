@@ -81,8 +81,8 @@ h1 {
     position: absolute;
     left: 0;
     right: 0;
-    color: #000;
-    font-size: 4em;
+    color: white;
+    text-shadow: 1px 1px 2px grey, 0 0 25px lightgrey, 0 0 5px darkblue;
     font-weight: 400;
     line-height: 0;
     z-index: -1;
@@ -90,6 +90,10 @@ h1 {
 
 .screen-win-tie {
     background: #54D17A;
+}
+
+.screen-win-tie p:before {
+    content: "TIE!";
 }
 
 .screen-win-one {
@@ -101,8 +105,7 @@ h1 {
 }
 
 .screen-win-one p:before {
-    content: "o";
-    top: 1.75rem;
+    content: "O Wins!";
 }
 
 .screen-win-two {
@@ -114,8 +117,7 @@ h1 {
 }
 
 .screen-win-two p:before {
-    content: "×";
-    top: 4.5rem;
+    content: "X Wins!";
 }
 
 .board {
@@ -190,6 +192,17 @@ h1 {
 .boxes .box:nth-child(3n) {
     margin-right: 0;
 }
+.boxes .OSet {
+    background-color: #FFA000 !important;
+    background-image: url(../img/o.svg) !important;
+    opacity: 1;
+}
+
+.boxes .XSet {
+    background-color: #3688C3 !important;
+    background-image: url(../img/x.svg) !important;
+    opacity: 1;
+}
 
 .boxes .O {
     background-color: #FFA000;
@@ -203,16 +216,12 @@ h1 {
     opacity: .5;
 }
 
-.boxes .OSet {
-    background-color: #FFA000;
-    background-image: url(../img/o.svg);
+.slideUp {
+    transform: translateY(-100%);
+    transition: transform .6s ease;
+
 }
 
-.boxes .XSet {
-    background-color: #3688C3;
-    background-image: url(../img/x.svg);
+.reload {
+    margin-top: 120px;
 }
-
-
-
-
